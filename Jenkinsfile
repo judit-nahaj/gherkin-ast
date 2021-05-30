@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('Build & Test') {
             steps {
-                script '''
+                sh '''
                 npm i
                 npm test
                 '''
