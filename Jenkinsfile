@@ -2,9 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage ('🎢 Build 🎢') {
+        stage ('Build & Test') {
             steps {
-                echo '1'
+                script '''
+                npm i
+                npm test
+                '''
             }
         }
     }
