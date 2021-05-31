@@ -11,7 +11,7 @@ pipeline {
             }
             post {
                 always {
-                    junit 'coverage/clover.xml'
+                    junit '**/coverage/clover.xml'
                     archiveArtifacts 'coverage/clover.xml'
                 }
             }
