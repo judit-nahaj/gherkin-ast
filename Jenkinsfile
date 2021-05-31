@@ -9,6 +9,17 @@ pipeline {
                 npm test
                 '''
             }
+            post {
+                always {
+                    junit 'coverage/clover.xml'
+                    archiveArtifacts 'coverage/clover.xml'
+                }
+            }
+        }
+        stage ('Release') {
+            steps {
+                echo 'code here'
+            }
         }
     }
     post {
