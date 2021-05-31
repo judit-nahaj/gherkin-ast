@@ -10,7 +10,7 @@ pipeline {
                 '''
             }
             post {
-                fail {
+                failure {
                     emailext body: 'Hello', subject: 'Idea Pool Email Notif', to: 'judit_nahaj@epam.com'
                 }
                 always {
