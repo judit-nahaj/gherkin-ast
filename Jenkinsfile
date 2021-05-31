@@ -23,6 +23,11 @@ pipeline {
             steps {
                 echo 'code here'
             }
+            post {
+                success {
+                    emailext body: 'Hello', subject: 'Idea Pool Email Notif', to: 'judit_nahaj@epam.com'
+                }
+            }
         }
     }
     post {
