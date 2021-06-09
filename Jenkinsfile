@@ -11,7 +11,7 @@ pipeline {
             }
             post {
                 failure {
-                    mail body: "Build & Test Stage Failure.\nDetails at ${env.BUILD_URL}", subject: 'Idea Pool Email Notif', to: 'judit_nahaj@epam.com'
+                    mail body: "Build & Test Stage Failure.\nDetails at ${env.BUILD_URL}", subject: 'Idea Pool Email Notif', to: "${env.RECIPIENTS}"
                 }
                 always {
                     junit 'reports/junit.xml'
