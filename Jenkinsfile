@@ -25,7 +25,7 @@ pipeline {
             }
             post {
                 success {
-                    mail body: "Release Stage Success.\nDetails at ${env.BUILD_URL}", subject: 'Idea Pool Email Notif', to: 'judit_nahaj@epam.com'
+                    mail body: "Release Stage Success.\nDetails at ${env.BUILD_URL}", subject: 'Idea Pool Email Notif', to: "${env.RECIPIENTS}"
                 }
             }
         }
