@@ -21,7 +21,10 @@ pipeline {
         }
         stage ('Release') {
             steps {
-                echo 'code here'
+                sh '''
+                npm config set registry https://npm.pkg.github.com/
+                npm publish
+                '''
             }
             post {
                 success {
