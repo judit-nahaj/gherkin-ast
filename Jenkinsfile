@@ -22,7 +22,7 @@ pipeline {
         stage ('Release') {
             steps {
                 sh '''
-                npm config set '//registry.npmjs.org/:_authToken' "${GITHUBTOKEN}"
+                npm config set '//npm.pkg.github.com/:_authToken' "${GITHUBTOKEN}"
                 npm publish
                 '''
             }
