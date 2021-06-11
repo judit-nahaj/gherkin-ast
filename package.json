@@ -1,6 +1,6 @@
 {
   "name": "@judit-nahaj/gherkin-ast",
-  "version": "3.0.2-alpha.2",
+  "version": "3.0.2-alpha.3",
   "description": "JS model for Gherkin feature files",
   "main": "index.js",
   "types": "index.d.ts",
